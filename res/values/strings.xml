@@ -10128,4 +10128,6 @@
     <string name="access_location_background">Access location in the background</string>
     <string name="access_location_background_empty_text">No installed apps have requested location access.</string>
 
+    <string name="randomize_mac_title">Randomize MAC address</string>
+    <string name="randomize_mac_summary">Assign a new random MAC address when Wi-Fi is brought up. Scanning MAC randomization is still used with this disabled.</string>
 </resources>
