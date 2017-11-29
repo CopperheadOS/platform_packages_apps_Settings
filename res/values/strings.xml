@@ -10085,4 +10085,7 @@
 
     <!-- Title for Connected device shortcut [CHAR LIMIT=30] -->
     <string name="devices_title">Devices</string>
+
+    <string name="background_access_title">Apps with background access</string>
+    <string name="background_access">Background access</string>
 </resources>
