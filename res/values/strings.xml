@@ -11353,4 +11353,6 @@
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
     <string name="work_policy_privacy_settings_summary">Settings managed by your IT admin</string>
 
+    <string name="background_access_title">Apps with background access</string>
+    <string name="background_access">Background access</string>
 </resources>
