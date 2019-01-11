@@ -139,6 +139,8 @@ public class ApplicationFeatureProviderImpl implements ApplicationFeatureProvide
         if (defaultSms != null) {
             keepEnabledPackages.add(defaultSms.getPackageName());
         }
+        keepEnabledPackages.add("org.chromium.chrome");
+        keepEnabledPackages.add("com.android.inputmethod.latin");
         return keepEnabledPackages;
     }
 
