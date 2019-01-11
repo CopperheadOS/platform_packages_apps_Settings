@@ -141,6 +141,9 @@ public class ApplicationFeatureProviderImpl implements ApplicationFeatureProvide
             keepEnabledPackages.add(defaultSms.getPackageName());
         }
 
+        keepEnabledPackages.add("org.chromium.chrome");
+        keepEnabledPackages.add("com.android.inputmethod.latin");
+
         keepEnabledPackages.addAll(getEnabledPackageWhitelist());
 
         final LocationManager locationManager =
