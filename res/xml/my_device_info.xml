@@ -124,6 +124,14 @@
         android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
+    <!-- Security flags -->
+    <Preference
+        android:key="security_flags"
+        android:order="33"
+        android:title="@string/security_flags"
+        settings:keywords="@string/keywords_security_flags"
+        android:summary="@string/summary_placeholder"/>
+
     <!--IP address -->
     <Preference
         android:key="wifi_ip_address"

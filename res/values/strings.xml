@@ -3107,6 +3107,8 @@
     <string name="build_number">Build number</string>
     <!-- About phone screen, tapping this button will take user to a seperate UI to check Google Play system update [CHAR LIMIT=60] -->
     <string name="module_version">Google Play system update</string>
+    <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
+    <string name="security_flags">Security flags</string>
 
     <!-- About phone screen, show when a value of some status item is unavailable. -->
     <string name="device_info_not_available">Not available</string>
@@ -7396,6 +7398,8 @@
     <string name="keywords_sim_status">network, mobile network state, service state, signal strength, mobile network type, roaming, iccid, eid</string>
     <string name="keywords_model_and_hardware">serial number, hardware version</string>
     <string name="keywords_android_version">android security patch level, baseband version, kernel version</string>
+    <string name="keywords_security_flags">selinux status, verity status, theft protection status</string>
+
     <!-- Search keywords for dark mode settings [CHAR LIMIT=NONE] -->
     <string name="keywords_dark_ui_mode">theme, light, dark, mode</string>
 

@@ -41,6 +41,7 @@ import com.android.settings.deviceinfo.SafetyInfoPreferenceController;
 import com.android.settings.deviceinfo.UptimePreferenceController;
 import com.android.settings.deviceinfo.WifiMacAddressPreferenceController;
 import com.android.settings.deviceinfo.imei.ImeiInfoPreferenceController;
+import com.android.settings.deviceinfo.securityflags.SecurityFlagsPreferenceController;
 import com.android.settings.deviceinfo.simstatus.SimStatusPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.widget.EntityHeaderController;
@@ -106,6 +107,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
             Context context, MyDeviceInfoFragment fragment, Lifecycle lifecycle) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new SimStatusPreferenceController(context, fragment));
+        controllers.add(new SecurityFlagsPreferenceController(context, fragment));
         controllers.add(new IpAddressPreferenceController(context, lifecycle));
         controllers.add(new WifiMacAddressPreferenceController(context, lifecycle));
         controllers.add(new BluetoothAddressPreferenceController(context, lifecycle));
