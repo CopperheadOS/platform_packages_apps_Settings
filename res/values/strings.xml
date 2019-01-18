@@ -2786,6 +2786,8 @@
     <string name="kernel_version">Kernel version</string>
     <!-- About phone screen,  setting option name  [CHAR LIMIT=40] -->
     <string name="build_number">Build number</string>
+    <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
+    <string name="security_flags">Security flags</string>
 
     <!-- About phone screen, show when a value of some status item is unavailable. -->
     <string name="device_info_not_available">Not available</string>
@@ -7024,6 +7026,7 @@
     <string name="keywords_sim_status">network, mobile network state, service state, signal strength, mobile network type, roaming, iccid</string>
     <string name="keywords_model_and_hardware">serial number, hardware version</string>
     <string name="keywords_android_version">android security patch level, baseband version, kernel version</string>
+    <string name="keywords_security_flags">selinux status, verity status, theft protection status</string>
     <!-- Search keyword for Ambient display settings screen. -->
     <string name="keywords_ambient_display_screen">Ambient display, Lock screen display</string>
     <!-- Search keyword for fingerprint settings. -->
