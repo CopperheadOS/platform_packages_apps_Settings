@@ -49,5 +49,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <TextView
+            style="@style/device_info_dialog_label"
+            android:id="@+id/theft_protection_status_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/theft_protection_status"/>
+        <TextView
+            style="@style/device_info_dialog_value"
+            android:id="@+id/theft_protection_status_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 </ScrollView>
