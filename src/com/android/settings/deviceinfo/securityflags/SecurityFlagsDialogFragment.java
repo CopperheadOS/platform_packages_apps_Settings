@@ -85,5 +85,6 @@ public class SecurityFlagsDialogFragment extends InstrumentedDialogFragment {
 
     private void initializeControllers() {
         new SELinuxStatusDialogController(this).initialize();
+        new VerityStatusDialogController(this).initialize();
     }
 }
