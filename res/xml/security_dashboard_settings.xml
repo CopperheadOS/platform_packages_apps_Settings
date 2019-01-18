@@ -168,4 +168,12 @@
        	android:fragment="com.android.settings.applications.BackgroundAccessSettings">
     </Preference>
 
+    <com.android.settingslib.RestrictedSwitchPreference
+        android:order="100"
+        android:key="native_debug"
+        android:title="@string/native_debug_title"
+        android:summary="@string/native_debug_summary"
+        android:persistent="false"
+        settings:controller="com.android.settings.security.NativeDebugPreferenceController"/>
+
 </PreferenceScreen>
