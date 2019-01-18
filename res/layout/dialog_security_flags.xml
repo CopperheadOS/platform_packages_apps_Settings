@@ -25,5 +25,17 @@
         android:layout_height="match_parent"
         android:padding="@dimen/sim_content_padding">
 
+        <TextView
+            style="@style/device_info_dialog_label"
+            android:id="@+id/selinux_status_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selinux_status"/>
+        <TextView
+            style="@style/device_info_dialog_value"
+            android:id="@+id/selinux_status_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 </ScrollView>
