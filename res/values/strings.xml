@@ -10133,4 +10133,8 @@
 
     <string name="native_debug_title">Enable native code debugging</string>
     <string name="native_debug_summary">Generate useful logs / bug reports from crashes and permit debugging native code.</string>
+
+    <string name="deny_new_usb_title">USB accessories</string>
+    <string name="deny_new_usb_summary">Control support for USB peripherals such as input (mice, keyboards, joysticks) and storage devices.</string>
+
 </resources>

@@ -50,6 +50,15 @@
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.security.LockscreenDashboardFragment" />
 
+        <com.android.settings.RestrictedListPreference
+            android:key="deny_new_usb"
+            android:title="@string/deny_new_usb_title"
+            android:summary="@string/deny_new_usb_summary"
+            android:persistent="false"
+            android:entries="@array/deny_new_usb_entries"
+            android:entryValues="@array/deny_new_usb_values"
+            settings:controller="com.android.settings.security.DenyNewUsbPreferenceController" />
+
         <Preference
             android:key="fingerprint_settings"
             android:title="@string/security_settings_fingerprint_preference_title"
