@@ -19,10 +19,14 @@ package com.android.settings.deviceinfo.securityflags;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Build;
+import android.os.SELinux;
+import android.os.SystemProperties;
+import android.service.persistentdata.PersistentDataBlockManager;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
 
+import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.AbstractPreferenceController;
 
@@ -31,11 +35,13 @@ public class SecurityFlagsPreferenceController extends AbstractPreferenceControl
 
     private final static String SECURITY_FLAGS_KEY = "security_flags";
 
+    private Context mContext;
     private final Fragment mFragment;
 
     public SecurityFlagsPreferenceController(Context context, Fragment fragment) {
         super(context);
 
+        mContext = context;
         mFragment = fragment;
     }
 
@@ -48,11 +54,34 @@ public class SecurityFlagsPreferenceController extends AbstractPreferenceControl
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
         final Preference pref = screen.findPreference(getPreferenceKey());
-/*
-        if (pref != null) {
-            pref.setSummary(Build.VERSION.RELEASE);
+        if (isSecure()) {
+            pref.setSummary(R.string.security_all_active);
+        } else {
+            pref.setSummary(R.string.security_needs_attention);
         }
-*/
+    }
+
+    private Boolean isSecure() {
+        // Check SELinux
+        if (!SELinux.isSELinuxEnabled() || !SELinux.isSELinuxEnforced()) {
+            return false;
+        }
+        // Check Theft Protection
+        final PersistentDataBlockManager manager = (PersistentDataBlockManager)
+                mContext.getSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE);
+        if (manager.getOemUnlockEnabled() || manager.getFlashLockState() != manager.FLASH_LOCK_LOCKED) {
+            return false;
+        }
+        // Check Verity
+        final String verifiedBootState = SystemProperties.get(VerityStatusDialogController.PROPERTY_VERIFIED_BOOT_STATE);
+        final String verityMode = SystemProperties.get(VerityStatusDialogController.PROPERTY_VERITY_MODE);
+        final int partitionSystemVerified = SystemProperties.getInt(VerityStatusDialogController.PROPERTY_PARTITION_SYSTEM_VERIFIED, 0);
+        final int partitionVendorVerified = SystemProperties.getInt(VerityStatusDialogController.PROPERTY_PARTITION_VENDOR_VERIFIED, 0);
+        if (!(("green".equals(verifiedBootState) || "yellow".equals(verifiedBootState)) &&
+                "enforcing".equals(verityMode) && partitionSystemVerified == 2 && partitionVendorVerified == 2)) {
+            return false;
+        }
+        return true;
     }
 
     @Override

@@ -10137,4 +10137,7 @@
     <string name="deny_new_usb_title">USB accessories</string>
     <string name="deny_new_usb_summary">Control support for USB peripherals such as input (mice, keyboards, joysticks) and storage devices.</string>
 
+    <string name="security_all_active">All active</string>
+    <string name="security_needs_attention">Needs attention</string>
+
 </resources>
