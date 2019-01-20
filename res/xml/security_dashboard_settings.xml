@@ -59,6 +59,13 @@
             android:entryValues="@array/deny_new_usb_values"
             settings:controller="com.android.settings.security.DenyNewUsbPreferenceController" />
 
+        <com.android.settingslib.RestrictedSwitchPreference
+            android:key="keyguard_camera"
+            android:title="@string/keyguard_camera_title"
+            android:summary="@string/keyguard_camera_summary"
+            android:persistent="false"
+            settings:controller="com.android.settings.security.KeyguardCameraPreferenceController"/>
+
         <Preference
             android:key="fingerprint_settings"
             android:title="@string/security_settings_fingerprint_preference_title"

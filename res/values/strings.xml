@@ -10144,4 +10144,7 @@
     <string name="security_all_active">All active</string>
     <string name="security_needs_attention">Needs attention</string>
 
+    <string name="keyguard_camera_title">Camera on lockscreen</string>
+    <string name="keyguard_camera_summary">Allow using the default camera app from the lockscreen</string>
+
 </resources>
