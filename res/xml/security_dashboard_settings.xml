@@ -23,6 +23,7 @@
     settings:initialExpandedChildrenCount="9">
 
     <!-- security_settings_status.xml -->
+<!-- hide for now, its empty anyway
     <PreferenceCategory
         android:order="-10"
         android:key="security_status"
@@ -31,6 +32,7 @@
     <PreferenceCategory
         android:order="1"
         android:key="dashboard_tile_placeholder" />
+-->
 
     <!-- security section -->
     <PreferenceCategory
