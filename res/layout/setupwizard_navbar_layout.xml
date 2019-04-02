@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.setupdesign.view.NavigationBar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/navigation_bar"
+        style="@style/SudNavBarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sud_navbar_height" />

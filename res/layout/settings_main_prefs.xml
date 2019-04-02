@@ -20,7 +20,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_height="match_parent"
-              android:layout_width="match_parent">
+              android:layout_width="match_parent"
+              android:id="@+id/main_content_view">
+
+    <ViewStub
+        android:id="@+id/header_stub"
+        android:layout_width="match_parent"
+        android:layout_height="88dp" />
 
     <com.android.settings.widget.SwitchBar
         android:id="@+id/switch_bar"
@@ -69,5 +75,10 @@
         </LinearLayout>
 
     </RelativeLayout>
+
+    <ViewStub
+        android:id="@+id/setupwizard_navbar_stub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sud_navbar_height" />
 
 </LinearLayout>

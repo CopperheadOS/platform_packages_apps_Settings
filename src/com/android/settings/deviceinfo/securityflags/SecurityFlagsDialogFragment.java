@@ -19,15 +19,17 @@ package com.android.settings.deviceinfo.securityflags;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.fragment.app.FragmentManager;
+
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
+import com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment;
 
 public class SecurityFlagsDialogFragment extends InstrumentedDialogFragment {
 
@@ -35,8 +37,8 @@ public class SecurityFlagsDialogFragment extends InstrumentedDialogFragment {
 
     private View mRootView;
 
-    public static void show(Fragment host) {
-        final FragmentManager manager = host.getChildFragmentManager();
+    public static void show(MyDeviceInfoFragment host) {
+        final FragmentManager manager = host.getActivity().getSupportFragmentManager();
         if (manager.findFragmentByTag(TAG) == null) {
             final SecurityFlagsDialogFragment dialog = new SecurityFlagsDialogFragment();
             dialog.show(manager, TAG);

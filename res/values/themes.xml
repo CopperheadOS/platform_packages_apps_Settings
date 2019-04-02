@@ -252,4 +252,10 @@
         <item name="android:colorPrimaryDark">@android:color/white</item>
         <item name="android:colorAccent">@color/material_blue_700</item>
     </style>
+    
+    <style name="Theme.Settings.WifiForSetupWizard" parent="@style/Theme.Settings">
+        <item name="android:windowBackground">@color/background_for_setup_wizard</item>
+        <item name="android:colorSecondary">@color/background_for_setup_wizard</item>
+    </style>
+
 </resources>

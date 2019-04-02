@@ -279,6 +279,20 @@
                 android:value="true" />
         </activity>
 
+        <activity android:name=".wifi.WifiSettingsForSetupWizardActivity"
+            android:taskAffinity=""
+            android:label="@string/wifi_settings"
+            android:icon="@drawable/ic_settings_wireless"
+            android:theme="@style/Theme.Settings.WifiForSetupWizard"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter android:priority="1">
+                <action android:name="co.copperhead.setupwizard.SETUP_WIFI" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.wifi.WifiSettingsForSetupWizard" />
+        </activity>
+
         <activity
             android:name="Settings$ConfigureWifiSettingsActivity"
             android:label="@string/wifi_configure_settings_preference_title"

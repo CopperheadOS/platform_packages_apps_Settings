@@ -15,6 +15,9 @@
 -->
 
 <resources>
+    <color name="black">#000</color>
+
+    <color name="background_for_setup_wizard">#e4e7e9</color>
 
     <color name="crypt_keeper_clock_background">#ff9a9a9a</color>
     <color name="crypt_keeper_clock_foreground">#ff666666</color>

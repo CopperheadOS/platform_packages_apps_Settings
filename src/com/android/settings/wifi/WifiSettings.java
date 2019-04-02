@@ -366,7 +366,7 @@ public class WifiSettings extends RestrictedSettingsFragment
     /**
      * @return new WifiEnabler or null (as overridden by WifiSettingsForSetupWizard)
      */
-    private WifiEnabler createWifiEnabler() {
+    protected WifiEnabler createWifiEnabler() {
         final SettingsActivity activity = (SettingsActivity) getActivity();
         return new WifiEnabler(activity, new SwitchBarController(activity.getSwitchBar()),
                 mMetricsFeatureProvider);
